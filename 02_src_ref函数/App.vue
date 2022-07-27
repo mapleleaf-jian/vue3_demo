@@ -1,25 +1,25 @@
 <template>
+  <h1>{{name}}</h1>
   <h2>{{job.salary}}</h2>
-  <h2>{{hobby}}</h2>
   <button @click="updateInfo">更新</button>
 </template>
 
 <script>
-import {reactive} from 'vue'
+import {ref} from 'vue'
 export default {
   name: 'App',
   setup() {
-    let job = reactive({
+    let name = ref('vue2')
+    let job = ref({
       salary: '30K'
     })
-    let hobby = reactive(['ball', 'book'])
     function updateInfo() {
-      job.salary = '40K'
-      hobby[0] = 'bike'
+      name.value = 'vue3'
+      job.value.salary = '40K'
     }
     return {
+      name,
       job,
-      hobby,
       updateInfo
     }
   }
