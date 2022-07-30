@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import {ref, watchEffect} from "vue";
+import {ref, watchEffect} from "vue"
 export default {
   name: 'DeMo',
   setup() {
