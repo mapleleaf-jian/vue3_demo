@@ -25,7 +25,7 @@ export default {
 
     const p = new Proxy(person, {
       get(target, propName) {
-        return Reflect(target, propName)
+        return Reflect.get(target, propName)
       },
       set(target, propName, value) {
         Reflect.set(target, propName, value)
